@@ -1,0 +1,141 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(97,0,255);
+  background: linear-gradient(180deg, rgba(97,0,255,1) 26%, rgba(0,212,255,1) 100%); 
+}
+
+.container {
+  margin: 120px auto;
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+header {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.inputField input {
+  font-family: 'Work Sans', sans-serif;
+  height: 30px;
+  width: 80%;
+  text-indent: 10px;
+  border: 1px solid #03045e;
+  border-radius: 5px;
+  padding: 5px 0;
+  font-size: 1rem;
+  margin-left: 2px;
+}
+.inputField input:focus {
+  outline: none;
+}
+.inputField button {
+  height: 33px;
+  width: 15%;
+  height: 42px;
+  margin-left: 10px;
+  background-color: #6930c3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.inputField button:hover {
+  background-color: #7400b8;
+}
+.container .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.todoList .listItem {
+  position: relative;
+  height: 40px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+.todoList .listItem:last-child {
+  margin-bottom: 0;
+}
+.todoList .listItem li {
+  list-style: none;
+}
+.todoList .listItem .fa-check {
+  /* position: relative; */
+  /* color: white; */
+  color: rgb(12, 12, 95);
+  padding-top: 21px;
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.todoList .listItem .trashIcon {
+  position: absolute;
+  background-color: #e74c3c;
+  color: white;
+  width: 45px;
+  height: 40px;
+  right: -45px;
+  text-align: center;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.todoList .listItem:hover .trashIcon {
+  right: 0px;
+}
+.container .footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.footer button {
+  font-family: 'Work Sans', sans-serif;
+  border: none;
+  outline: none;
+  background-color: #6930c3;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+.pendingNumber {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.fa-trash {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
